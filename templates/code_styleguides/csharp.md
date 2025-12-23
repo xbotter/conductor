@@ -45,11 +45,10 @@ Within a class, enum, interface, or struct:
 14. Classes
 
 ## 4. Language Features
-- **var:** Use `var` when the type is obvious from the right side. Use explicit types when clarity is needed.
+- **var:** Use `var` when the type is obvious from the right side. Avoid for basic types, numeric types, or when type clarity helps readability.
   ```csharp
-  var name = "John";  // OK
-  var count = GetCount();  // OK only if return type is clear
-  string explicitType = GetValue();  // Better when type isn't obvious
+  var apple = new Apple();  // Good - type is obvious
+  bool success = true;  // Preferred over var for basic types
   ```
 - **Expression-bodied Members:** Use sparingly for simple properties and lambdas; don't use on method definitions.
   ```csharp
